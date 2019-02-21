@@ -30,7 +30,7 @@ a{
 .header{
 	width: 100%;
 	height: 100%;
-	background-image: url("imagenes/fondo.jpg");
+	background-image: url("../imagenes/fondo.JPG");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
