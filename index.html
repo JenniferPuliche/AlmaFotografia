@@ -19,7 +19,7 @@
 			</div>
 		</header>
 		<div id="about" class="about">
-			<div class="tituloAbout">About</div>
+			<div class="tituloAbout" id="about"><h3>About</h3></div>
 			<div class="imagen"><img src="imagenes/profile.jpg"></div>
 			<div class="parrafo"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -53,16 +53,37 @@
 		</div>
 		<div class="contact" id="contact">
 			<h2 class="titulo2">Contact</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			<p>Mail: lorem@ipsum.com</p>
-			<p>Tel: 11111111</p>
-
-			<form>
-				
+			<div class="parrafo">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Mail: lorem@ipsum.com</p>
+				<p>Tel: 11111111</p>
+			</div>
+			<form action="" method="" class="formulario">
+				<div class="mensaje">	
+					<a class="contacto">Envianos un mensaje</a>
+				</div>
+				<div class="datos">
+					<input type="text" name="nombre" placeholder="Nombre">
+					<input type="text" name="apellido" placeholder="Apellido">
+					<input type="email" name="mail" placeholder="E-mail">
+					<input type="phone" name="telefono" placeholder="Teléfono">
+					<textarea placeholder="Escribe tu mensaje"></textarea>
+				<div class="btn-agregar">	
+					<a class="agregar">Agregar dirección</a>
+				</div>
+				<div class="direccion">
+					<input type="text" name="calle" placeholder="Calle">
+					<input type="text" name="altura" placeholder="Altura">
+					<input type="text" name="ciudad" placeholder="Ciudad">
+				</div>
+				<button type="submit" name="enviar" class="submit">Enviar</button>
+				</div>
 			</form>
 		</div>	
 	</div>
 	<script src="js/app.js"></script>
+	<script src="js/jquery.shuffleLetters.js"></script>
+
 </body>
 </html>

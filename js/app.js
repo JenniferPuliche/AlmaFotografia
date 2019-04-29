@@ -19,4 +19,21 @@ $(window).scroll(function(){
 
 	}
 
-})
+});
+
+$(document).ready(function(){
+	$('.formulario').on('click', '.contacto', function(event){
+		event.preventDefault();
+		$(this).closest('.formulario').find('.datos').fadeToggle(1000);
+	});
+	$('.formulario').on('click', '.agregar', function(event){
+		event.preventDefault();
+		$(this).closest('.formulario').find('.direccion').fadeToggle(1000);
+	});
+
+
+
+		//var txt = $('.tituloAbout');
+		//txt.shuffleLetters();
+
+});
