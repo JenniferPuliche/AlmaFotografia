@@ -64,11 +64,11 @@
 					<a class="contacto">Envianos un mensaje</a>
 				</div>
 				<div class="datos">
-					<input type="text" name="nombre" placeholder="Nombre">
-					<input type="text" name="apellido" placeholder="Apellido">
-					<input type="email" name="mail" placeholder="E-mail">
+					<input type="text" name="nombre" placeholder="Nombre" required>
+					<input type="text" name="apellido" placeholder="Apellido" required>
+					<input type="email" name="mail" placeholder="E-mail" required>
 					<input type="phone" name="telefono" placeholder="Teléfono">
-					<textarea placeholder="Escribe tu mensaje"></textarea>
+					<textarea required placeholder="Escribe tu mensaje"></textarea>
 				<div class="btn-agregar">	
 					<a class="agregar">Agregar dirección</a>
 				</div>
@@ -77,13 +77,12 @@
 					<input type="text" name="altura" placeholder="Altura">
 					<input type="text" name="ciudad" placeholder="Ciudad">
 				</div>
-				<button type="submit" name="enviar" class="submit">Enviar</button>
+				<input type="button" name="enviar" class="submit" value="Enviar"></input>
 				</div>
 			</form>
 		</div>	
 	</div>
 	<script src="js/app.js"></script>
-	<script src="js/jquery.shuffleLetters.js"></script>
 
 </body>
 </html>
