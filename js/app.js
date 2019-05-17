@@ -32,8 +32,16 @@ $(document).ready(function(){
 	});
 
 
-
-		//var txt = $('.tituloAbout');
-		//txt.shuffleLetters();
-
 });
+
+
+var inputName = document.querySelector('input[name="nombre"]');
+
+ inputName.onblur = function (){
+    if (inputName.value == "") {
+      this.classList.add("is-invalid")
+      this.parentNode.querySelector('.invalid-feedback').innerText='Ingrese un nombre válido';
+    }else{
+      this.classList.remove('.invalid-feedback');
+    }
+  }
