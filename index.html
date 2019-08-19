@@ -3,23 +3,28 @@
 <head>
 	<title>Alma fotografía</title>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
 </head>
 <body>
 	<div id="preload"><span class="simbolo"></span></div>
 	<div class="container">
 		<header>
 			<div class="nav">
-				<div><a href="#">HOME</a></div>
-				<div><a href="#about">ABOUT</a></div>
-				<div><a href="#gallery">GALLERY</a></div>
-				<div><a href="#contact">CONTACT</a></div>
+				<div><a href="#" class="shadow-radial">HOME</a></div>
+				<div><a href="#about" class="shadow-radial">ABOUT</a></div>
+				<div><a href="#gallery" class="shadow-radial">GALLERY</a></div>
+				<div><a href="#contact" class="shadow-radial">CONTACT</a></div>
 			</div>
 		</header>
 		<div id="about" class="about">
-			<div class="tituloAbout" id="about"><h3>About</h3></div>
+			<div class="tituloAbout" id="about"><h3>ABOUT</h3></div>
 			<div class="imagen"><img src="imagenes/profile.jpg"></div>
 			<div class="parrafo"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -34,30 +39,98 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
 		</div>
-		<h2 class="tituloGallery">Gallery</h2>
-		<div class="gallery" id="gallery">
-			<img src="imagenes/recoleta.jpg" alt="foto1">
-			<img src="imagenes/botanico.jpg" alt="foto1">
-			<img src="imagenes/cordoba.JPG" alt="foto1">
-			<img src="imagenes/jairoyeli.jpg" alt="foto1">
-			<img src="imagenes/chacabuco.jpg" alt="foto1">
-			<img src="imagenes/costanera.jpg" alt="foto1">
-			<img src="imagenes/pato.jpg" alt="foto1">
-			<img src="imagenes/atardeceres.jpg" alt="foto1">
-			<img src="imagenes/puertomadero.jpg" alt="foto1">
-			<img src="imagenes/mendoza.jpg" alt="foto1">
+		<h2 class="tituloGallery">GALLERY</h2>
+		<div class="categorias" id="categorias">
+			<a href="#" class="activo">Todos</a>
+			<a href="#">Naturaleza</a>
+			<a href="#">Ciudades</a>
+			<a href="#">Personas</a>
+			<a href="#">Animales</a>
 		</div>
+		<section class="grid" id="grid">
+			<div class="item" 
+				 data-categoria="ciudades"
+				 data-etiquetas="ciudades autos carros calles"
+				 data-descripcion="1.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/puertomadero.jpg" alt="">
+				</div>
+			</div>
+			<div class="item"
+				 data-categoria="personas"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="2.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/jairoyeli.jpeg" alt="">
+				</div>
+			</div>
+			<div class="item"
+				 data-categoria="paisajes"
+				 data-etiquetas="paisajes montañas mar playas"
+				 data-descripcion="3.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/atardeceres.jpeg" alt="">
+				</div>
+			</div>
+			<div class="item"
+				 data-categoria="animales"
+				 data-etiquetas="animales leones"
+				 data-descripcion="4.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/pato.jpg" alt="">
+				</div>
+			</div>
+			<div class="item"
+				 data-categoria="naturaleza"
+				 data-etiquetas="flores plantas"
+				 data-descripcion="5.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/botanico.jpg" alt="">
+				</div>
+			</div>
+			<div class="item"
+				 data-categoria="naturaleza"
+				 data-etiquetas="flores plantas"
+				 data-descripcion="6.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/cordoba.jpeg" alt="">
+				</div>
+			</div>
+			<div class="item" 
+				 data-categoria="ciudades"
+				 data-etiquetas="ciudades paisajes carreteras"
+				 data-descripcion="7.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/costanera.jpeg" alt="">
+				</div>
+			</div>
+			<div class="item" 
+				 data-categoria="personas"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="8.- Lorem ipsum dolor sit amet consectetur.">
+				<div class="item-contenido">
+					<img src="imagenes/persona.jpg" alt="">
+				</div>
+			</div>
+		</section>
+		<section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+				<img src="" alt="">
+			</div>
+			<p class="descripcion"></p>
+		</section>
 		<div class="contact" id="contact">
-			<h2 class="titulo2">Contact</h2>
+			<h2 class="tituloContact">CONTACT</h2>
 			<div class="parrafo">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Mail: lorem@ipsum.com</p>
 				<p>Tel: 11111111</p>
 			</div>
-			<form action="" method="" class="formulario">
+			<form action="" method="get" name="formulario" class="formulario">
 				<div class="mensaje">	
-					<a class="contacto">Envianos un mensaje</a>
+					<a class="contacto push outline-inward">Envianos un mensaje</a>
 				</div>
 				<div class="datos">
 					<input type="text" name="nombre" placeholder="Nombre" required>
@@ -74,10 +147,30 @@
 					<input type="text" name="altura" placeholder="Altura">
 					<input type="text" name="ciudad" placeholder="Ciudad">
 				</div>
-				<input type="button" name="enviar" class="submit" value="Enviar"></input>
+				<input type="submit" name="enviar" id="btn" class="submit wobble-horizontal" value="Enviar"></input>
 				</div>
 			</form>
-		</div>	
+			<div class="redes-sociales">
+				<div class="contenedor-icono">
+					<a href="http://www.twitter.com" target="_blank" class="twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="http://www.facebook.com" target="_blank" class="facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="http://www.instagram.com" target="_blank" class="instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<h4>Todos los derechos reservados</h4>
+		</footer>	
 	</div>
 	<script src="js/app.js"></script>
 
