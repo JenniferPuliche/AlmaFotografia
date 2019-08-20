@@ -148,6 +148,7 @@ header{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	border-bottom-right-radius: 650px 220px; 
 }
 
 .about, .contact{
