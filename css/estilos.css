@@ -97,6 +97,19 @@ a{
 	position: absolute;
 }
 
+.frase{
+	position: absolute;
+	top:45%;
+	left: 6%;
+	
+}
+
+h1{
+	font-family: 'Sacramento', cursive;
+	color: white;
+	font-size: 44px;
+}
+
 .nav{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -148,7 +161,7 @@ header{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	border-bottom-right-radius: 650px 220px; 
+	/*border-bottom-right-radius: 650px 220px;*/ 
 }
 
 .about, .contact{
@@ -300,6 +313,7 @@ header{
 	position: absolute;
 	right: -20px;
 	top: -20px;
+	
 }
 
 .contact, .mensaje{
